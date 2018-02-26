@@ -1,0 +1,7 @@
+{
+  "name": "Final Project",
+  "description": "Final Project is a Trello Power-Up hosted on Heroku",
+  "repository": "https://mattymcgraw.github.io/final-project/",
+  "logo": "https://mattymcgraw.github.io/final-project/public/trello.png?raw=true",
+  "keywords": ["trello", "power-ups", "node", "express", "static"]
+}

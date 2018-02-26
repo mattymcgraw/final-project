@@ -1,0 +1,16 @@
+{
+  "name": "Final Project",
+  "details":"Final Project is a Trello Power-Up hosted on Heroku",
+  "icon": {
+    "url": "https://mattymcgraw.github.io/final-project/public/trello.png?raw=true"
+  },
+  "author": "Matthew McGraw",
+  "capabilities": [
+    "board-buttons"
+  ],
+  "connectors": {
+    "iframe": {
+      "url": "./index.html"
+    }
+  }
+}
