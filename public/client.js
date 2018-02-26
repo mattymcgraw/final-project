@@ -1,7 +1,7 @@
 TrelloPowerUp.initialize({
 	'card-buttons': function(t, options){
 		return [{
-			icon: 'https://github.com/mattymcgraw/final-project/blob/master/public/sanctum-sanctorum.png',
+			icon: 'https://raw.githubusercontent.com/mattymcgraw/final-project/master/public/sanctum-sanctorum.png',
 			text: 'Estimate Time',
     	}];
 	},

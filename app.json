@@ -2,6 +2,6 @@
   "name": "Final Project",
   "description": "Final Project is a Trello Power-Up hosted on Heroku",
   "repository": "https://mattymcgraw.github.io/final-project/",
-  "logo": "https://github.com/mattymcgraw/final-project/blob/master/public/sanctum-sanctorum.png?raw=true",
+  "logo": "https://raw.githubusercontent.com/mattymcgraw/final-project/master/public/sanctum-sanctorum.png",
   "keywords": ["trello", "power-ups", "node", "express", "static"]
 }
