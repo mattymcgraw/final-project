@@ -15,8 +15,8 @@ window.TrelloPowerUp.initialize({
     }, {
       // but of course, you could also just kick off to a url if that's your thing
       icon: GRAY_ICON,
-      text: 'Just a URL',
-      url: 'https://developers.trello.com',
+      text: 'JS-DT-7 Repo',
+      url: 'https://github.com/dafabulousteach/js-dt-7',
       target: 'Trello Developer Site' // optional target for above url
     }];
   },
