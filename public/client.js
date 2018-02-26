@@ -1,28 +1,53 @@
-TrelloPowerUp.initialize({
-	'card-buttons': function(t, options){
-		return [{
-			icon: 'https://raw.githubusercontent.com/mattymcgraw/final-project/master/public/sanctum-sanctorum.png',
-			text: 'Estimate Time',
-    	}];
-	},
-	'board-buttons': function(t, options){
-		return [{
-			text: 'Final Project',
-			url: 'https://trello.com/b/wD3Gigzp',
-			target: 'Final Project'
-	}];
-	},
-	'format-url': function (t, options) {
-		// options.url has the url that we are being asked to format
-		// in our response we can include an icon as well as the replacement text
+var GRAY_ICON = 'https://cdn.hyperdev.com/us-east-1%3A3d31b21c-01a0-4da2-8827-4bc6e88b7618%2Ficon-gray.svg';
 
-		return {
-			icon: GRAY_ICON, // don't use a colored icon here
-			text: '👉 ' + options.url + ' 👈' 
-		};
+var onBtnClick = function (t, opts) {
+  console.log('Someone clicked the button');
+};
 
-		// if we don't actually have any valuable information about the url
-		// we can let Trello know like so:
-		throw t.NotHandled();
-	}
+window.TrelloPowerUp.initialize({
+  'card-buttons': function (t, opts) {
+    return [{
+      // usually you will provide a callback function to be run on button click
+      // we recommend that you use a popup on click generally
+      icon: GRAY_ICON, // don't use a colored icon here
+      text: 'Open Popup',
+      callback: onBtnClick
+    }, {
+      // but of course, you could also just kick off to a url if that's your thing
+      icon: GRAY_ICON,
+      text: 'Just a URL',
+      url: 'https://developers.trello.com',
+      target: 'Trello Developer Site' // optional target for above url
+    }];
+  },
+
+  'card-badges': function (t, opts) {
+    return t.card('name')
+    .get('name')
+    .then(function(cardName){
+      console.log('We just loaded the card name for fun: ' + cardName);
+      return [{
+        // dynamic badges can have their function rerun
+        // after a set number of seconds defined by refresh.
+        // Minimum of 10 seconds.
+        dynamic: function(){
+          // we could also return a Promise that resolves to
+          // this as well if we needed to do something async first
+          return {
+            text: 'Dynamic ' + (Math.random() * 100).toFixed(0).toString(),
+            icon: './images/icon.svg',
+            color: 'green',
+            refresh: 10 // in seconds
+          };
+        }
+      }, {
+        // its best to use static badges unless you need your
+        // badges to refresh you can mix and match between
+        // static and dynamic
+        text: 'Static',
+        icon: HYPERDEV_ICON, // for card front badges only
+        color: null
+      }];
+    });
+  }
 });
