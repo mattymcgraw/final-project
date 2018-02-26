@@ -2,7 +2,7 @@
   "name": "Final Project",
   "details":"Final Project is a Trello Power-Up hosted on Heroku",
   "icon": {
-    "url": "https://github.com/mattymcgraw/final-project/blob/master/public/sanctum-sanctorum.png?raw=true"
+    "url": "https://raw.githubusercontent.com/mattymcgraw/final-project/master/public/sanctum-sanctorum.png"
   },
   "author": "Matthew McGraw",
   "capabilities": [
